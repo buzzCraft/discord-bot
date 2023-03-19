@@ -40,12 +40,12 @@ def get_buck_score(url):
     text = json.loads(test_url)['ParsedResults'][0]['ParsedText'].splitlines()
     return text[2]
 
+
 def get_db_score(url):
     test_url = ocr_space_url(url=url)
     # Parse the JSON response find the int value in the
 
     text = json.loads(test_url)['ParsedResults'][0]['ParsedText'].splitlines()
-    print(text)
     return text[9]
 
 
